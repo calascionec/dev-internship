@@ -117,18 +117,22 @@ li {
 li + li {
   margin-top: 1em;
 }
+/* line 45, ../sass/_typography.scss */
+li p {
+  margin-top: 1em;
+}
 
-/* line 46, ../sass/_typography.scss */
+/* line 50, ../sass/_typography.scss */
 ol li {
   list-style: decimal;
 }
 
-/* line 50, ../sass/_typography.scss */
+/* line 54, ../sass/_typography.scss */
 em {
   font-style: italic;
 }
 
-/* line 54, ../sass/_typography.scss */
+/* line 58, ../sass/_typography.scss */
 strong {
   font-weight: bold;
 }
@@ -158,4 +162,37 @@ footer {
 footer p {
   color: #ffffff;
   font-size: .8em;
+}
+
+/*Nav Styles*/
+/* line 32, ../sass/_dev-internship.scss */
+nav ul {
+  list-style: none;
+  display: flex;
+  height: 100%;
+}
+/* line 37, ../sass/_dev-internship.scss */
+nav ul li {
+  align-self: center;
+  flex-grow: 1;
+}
+/* line 40, ../sass/_dev-internship.scss */
+nav ul li a {
+  color: #666666;
+}
+/* line 43, ../sass/_dev-internship.scss */
+nav ul li a:hover {
+  text-decoration: underline;
+}
+/* line 47, ../sass/_dev-internship.scss */
+nav ul li:first-child {
+  flex-grow: 2;
+  line-height: 2em;
+}
+
+@media all and (max-width: 800px) {
+  /* line 57, ../sass/_dev-internship.scss */
+  nav ul li {
+    justify-content: space-between;
+  }
 }

@@ -37,13 +37,17 @@ a{
 li{
 	line-height: 1.2em;
 	max-width: 800px;
-	
+
 	+ li{
+		margin-top: 1em;
+	}
+
+	p{
 		margin-top: 1em;
 	}
 }
 
-ol li{ 
+ol li{
 	list-style: decimal;
 }
 

@@ -19,9 +19,44 @@ section{
 footer{
 	padding: 2em 10vw;
 	background: $gray;
-	
-	p{ 
+
+	p{
 		color: $white;
 		font-size: .8em;
+	}
+}
+
+/*Nav Styles*/
+
+nav{
+	ul{
+		list-style: none;
+		display: flex;
+		height: 100%;
+
+		li {
+			align-self: center;
+			flex-grow: 1;
+			a{
+				color:$gray;
+			}
+			a:hover{
+				text-decoration: underline;
+			}
+		}
+		li:first-child{
+			flex-grow: 2;
+			line-height: 2em;
+		}
+	}
+}
+
+@media all and (max-width: 800px) {
+	nav{
+		ul{
+			li{
+				justify-content: space-between;
+			}
+		}
 	}
 }
