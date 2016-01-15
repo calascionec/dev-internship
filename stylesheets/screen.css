@@ -70,7 +70,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* VARIABLES */
 /* TYPOGRAPHY */
 /* line 3, ../sass/_typography.scss */
-h1, h2, h3, p, li {
+h1, h2, h3, h4, h5, p, li {
   font-family: "Maison Neue", sans-serif;
   font-weight: 100;
 }
@@ -91,50 +91,83 @@ h2 {
 }
 
 /* line 21, ../sass/_typography.scss */
+h3 {
+  font-size: 1.75em;
+  font-weight: 400;
+}
+
+/* line 25, ../sass/_typography.scss */
+h4 {
+  font-weight: 300;
+  margin-top: 1.5em;
+}
+
+/* line 30, ../sass/_typography.scss */
+h5 {
+  font-size: .75em;
+}
+
+/* line 34, ../sass/_typography.scss */
 p {
   line-height: 1.4em;
   color: #111111;
   max-width: 800px;
 }
-/* line 26, ../sass/_typography.scss */
+/* line 39, ../sass/_typography.scss */
 p + p {
   margin-top: 2em;
 }
 
-/* line 31, ../sass/_typography.scss */
+/* line 44, ../sass/_typography.scss */
 a {
   color: #00b3e3;
   text-decoration: none;
   border-bottom: 1px dashed #00b3e3;
 }
 
-/* line 37, ../sass/_typography.scss */
+/* line 50, ../sass/_typography.scss */
 li {
   line-height: 1.2em;
   max-width: 800px;
 }
-/* line 41, ../sass/_typography.scss */
+/* line 54, ../sass/_typography.scss */
 li + li {
   margin-top: 1em;
 }
-/* line 45, ../sass/_typography.scss */
+/* line 58, ../sass/_typography.scss */
 li p {
   margin-top: 1em;
 }
 
-/* line 50, ../sass/_typography.scss */
+/* line 63, ../sass/_typography.scss */
 ol li {
   list-style: decimal;
+  font-weight: bold;
 }
 
-/* line 54, ../sass/_typography.scss */
+/* line 68, ../sass/_typography.scss */
 em {
   font-style: italic;
 }
 
-/* line 58, ../sass/_typography.scss */
+/* line 72, ../sass/_typography.scss */
 strong {
   font-weight: bold;
+}
+
+/* line 77, ../sass/_typography.scss */
+#resume-section h3:not(first-child) {
+  margin-top: 2em;
+}
+/* line 80, ../sass/_typography.scss */
+#resume-section ul {
+  list-style: disc;
+  list-style-position: inside;
+}
+/* line 83, ../sass/_typography.scss */
+#resume-section ul li {
+  margin-top: .25em;
+  font-size: .75em;
 }
 
 /* LANDING PAGE LAYOUT */
@@ -165,34 +198,47 @@ footer p {
 }
 
 /*Nav Styles*/
-/* line 32, ../sass/_dev-internship.scss */
+/* line 33, ../sass/_dev-internship.scss */
 nav ul {
   list-style: none;
   display: flex;
-  height: 100%;
+  margin-top: 2em;
 }
-/* line 37, ../sass/_dev-internship.scss */
+/* line 38, ../sass/_dev-internship.scss */
 nav ul li {
   align-self: center;
-  flex-grow: 1;
+  flex-grow: .25;
 }
-/* line 40, ../sass/_dev-internship.scss */
+/* line 42, ../sass/_dev-internship.scss */
+nav ul li + li {
+  margin: 0;
+}
+/* line 45, ../sass/_dev-internship.scss */
 nav ul li a {
   color: #666666;
 }
-/* line 43, ../sass/_dev-internship.scss */
+/* line 48, ../sass/_dev-internship.scss */
 nav ul li a:hover {
   text-decoration: underline;
 }
-/* line 47, ../sass/_dev-internship.scss */
+/* line 52, ../sass/_dev-internship.scss */
 nav ul li:first-child {
-  flex-grow: 2;
-  line-height: 2em;
+  flex-grow: 3;
 }
 
-@media all and (max-width: 800px) {
-  /* line 57, ../sass/_dev-internship.scss */
-  nav ul li {
-    justify-content: space-between;
+/*MEDIA QUERIES*/
+@media all and (max-width: 1150px) {
+  /* line 63, ../sass/_dev-internship.scss */
+  header {
+    padding: 2em;
+  }
+
+  /* line 67, ../sass/_dev-internship.scss */
+  nav ul {
+    flex-direction: column;
+  }
+  /* line 70, ../sass/_dev-internship.scss */
+  nav ul li:first-child {
+    margin-bottom: 2em;
   }
 }

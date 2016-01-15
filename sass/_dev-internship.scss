@@ -29,14 +29,19 @@ footer{
 /*Nav Styles*/
 
 nav{
+
 	ul{
 		list-style: none;
 		display: flex;
-		height: 100%;
+		margin-top: 2em;
 
 		li {
 			align-self: center;
-			flex-grow: 1;
+			flex-grow: .25;
+
+			+ li{
+				margin: 0;
+			}
 			a{
 				color:$gray;
 			}
@@ -45,17 +50,25 @@ nav{
 			}
 		}
 		li:first-child{
-			flex-grow: 2;
-			line-height: 2em;
+			flex-grow: 3;
 		}
 	}
 }
 
-@media all and (max-width: 800px) {
+
+
+/*MEDIA QUERIES*/
+
+@media all and (max-width: 1150px) {
+	header{
+		padding: 2em;
+	}
 	nav{
 		ul{
-			li{
-				justify-content: space-between;
+			flex-direction: column;
+
+			li:first-child{
+				margin-bottom: 2em;
 			}
 		}
 	}
