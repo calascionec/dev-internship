@@ -34,14 +34,15 @@ nav{
 		list-style: none;
 		display: flex;
 		margin-top: 2em;
+		align-items: baseline;
 
 		li {
-			align-self: center;
 			flex-grow: .25;
 
 			+ li{
 				margin: 0;
 			}
+
 			a{
 				color:$gray;
 			}
@@ -66,7 +67,7 @@ nav{
 	nav{
 		ul{
 			flex-direction: column;
-
+			align-items: center;
 			li:first-child{
 				margin-bottom: 2em;
 			}
